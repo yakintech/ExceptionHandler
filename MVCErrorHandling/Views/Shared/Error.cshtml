@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+}
+@model System.Web.Mvc.HandleErrorInfo
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ErrorHandle</title>
+</head>
+<body>
+    <div>
+        Beklenmedik bir hata oluştu!<br />
+
+        @if (Model.Exception==null)
+        {
+            <span>Javascript Hatası!</span>
+        }
+        else
+        {
+            <span>Hata Detayı: @Model.Exception.Message</span><br />
+        }
+        
+
+    </div>
+</body>
+</html>
+
